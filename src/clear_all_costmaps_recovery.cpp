@@ -5,13 +5,14 @@
 PLUGINLIB_EXPORT_CLASS(clear_all_costmaps_recovery::ClearAllCostmapsRecovery, nav_core::RecoveryBehavior)
 
 using costmap_2d::NO_INFORMATION;
+
 namespace clear_all_costmaps_recovery {
-  ClearAllCostmapsRecovery::ClearAllCostmapsRecovery():clear_costmap(nh.serviceClient<std_srvs::Empty>("/move_base_node/clear_costmaps"))
+  ClearAllCostmapsRecovery::ClearAllCostmapsRecovery()
   {
     ROS_INFO("Constructing clear_all_costmaps_recovery plugin!");
   }
 
-  void ClearAllCostmapsRecovery::initialize(std::string name, tf::TransformListener* tf, costmap_2d::Costmap2DROS* global_costmap, costmap_2d::Costmap2DROS* local_costmap)
+  void ClearAllCostmapsRecovery::initialize(std::string name, tf2_ros::Buffer* tf, costmap_2d::Costmap2DROS* global_costmap, costmap_2d::Costmap2DROS* local_costmap)
   {
     ROS_INFO("Initializing clear_all_costmaps_recovery plugin!");
   }
@@ -20,7 +21,7 @@ namespace clear_all_costmaps_recovery {
   {
     ROS_WARN("Running clear_all_costmaps_recovery plugin!");
     std_srvs::Empty cl_cm;
-    if(clear_costmap.call(cl_cm))
+    if(clear_costmap.call(cl_cm))//call for clear costmap server
     {
         ROS_INFO("move_base:Costmaps have been cleared!");
     }
@@ -30,4 +31,3 @@ namespace clear_all_costmaps_recovery {
     }    
   }
 };
-

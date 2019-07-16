@@ -1,6 +1,5 @@
 #include <clear_all_costmaps_recovery/clear_all_costmaps_recovery.h>
 #include <pluginlib/class_list_macros.h>
-#include <vector>
 
 //register this planner as a RecoveryBehavior plugin
 PLUGINLIB_EXPORT_CLASS(clear_all_costmaps_recovery::ClearAllCostmapsRecovery, nav_core::RecoveryBehavior)

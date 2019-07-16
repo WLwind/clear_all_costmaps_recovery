@@ -1,0 +1,7 @@
+<library path="lib/libclear_all_costmaps_recovery">
+  <class name="clear_all_costmaps_recovery/ClearAllCostmapsRecovery" type="clear_all_costmaps_recovery::ClearAllCostmapsRecovery" base_class_type="nav_core::RecoveryBehavior">
+    <description>
+      A recovery behavior that clear all the costmaps to recovery.
+    </description>
+  </class>
+</library>

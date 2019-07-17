@@ -1,0 +1,1 @@
+recovery_behaviors: [{name="clear_all_costmaps", type="clear_all_costmaps_recovery/ClearAllCostmapsRecovery"}]

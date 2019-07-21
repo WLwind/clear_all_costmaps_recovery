@@ -107,10 +107,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES clear_all_costmaps_recovery
-  CATKIN_DEPENDS cmake_modules costmap_2d nav_core pluginlib roscpp tf2_ros std_srvs
-  DEPENDS system_lib
+#  INCLUDE_DIRS include
+#  LIBRARIES clear_all_costmaps_recovery
+#  CATKIN_DEPENDS cmake_modules costmap_2d nav_core pluginlib roscpp tf2_ros std_srvs
+#  DEPENDS system_lib
 )
 
 ###########
